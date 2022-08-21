@@ -29,9 +29,20 @@
     -----       -----       -----       -----
     1   0       0 0 0       0 0 1       0 0 1
     0   1       1 0 1       1 1 1       1 1 0
+*bit_level_operation.c*
+>- gcc -o out/bit_level_operation bit_level_operation.c
 ##### Logic Operation
-    !
-    !!
-    &&
-    ||
+    !       !0x69
+    !!      !!0x69   
+    &&      0x69 && 0x55
+    ||      0x69 || 0x55
+*logic_operation.c*
+>- gcc -o out/logic_operation logic_operation.c
 ##### Shift Operation
+      operation                   value1              value2
+         x                      [01100011]          [10010101]
+       x << 4                   [00110000]          [01010000]
+     x >> 4(logical)            [00000110]          [00001001] <<<---unsigned
+    x >> 4(arithmetic)          [00000110]          [11111001] <<<---signed 
+*shift_operation.c*
+>- gcc -o out/shift_operation shift_operation.c
