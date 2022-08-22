@@ -46,3 +46,23 @@
     x >> 4(arithmetic)          [00000110]          [11111001] <<<---signed 
 *shift_operation.c*
 >- gcc -o out/shift_operation shift_operation.c
+##### Integer Presentation
+        C data type       minimum         maximum        Bytes
+       [signed] char       -2^7            2^7-1           1
+       unsigned char         0             2^8-1           1        
+            short         -2^15            2^15-1          2
+       unsigned short        0             2^32-1          2
+            int           -2^31            2^31-1          4
+        unsigned int         0             2^32-1          4
+            long          -2^63            2^63-1          8
+        unsigned long        0             2^64-1          8
+           int32_t        -2^31            2^31-1          4
+          uint32_t           0             2^64-1          4
+           int64_t        -2^63            2^63-1          8
+          uint64_t           0             2^64-1          8
+##### Unsigned EnCodings
+    --------------------------
+    | Xw-1 | Xw-2 | ... | X0 |
+    --------------------------
+*B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
+$$=\sum_{i=1}^wx~i~*2^i$$
