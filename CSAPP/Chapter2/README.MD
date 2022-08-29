@@ -24,7 +24,8 @@
 *byte_print.c* 
 >- gcc -o out/byte_print byte_print.c
 ### Boolean Algebra     
-##### Bit_Level Operations----->Mask Operation
+##### Bit_Level Operations----->Mask 
+Operation
     ~           & 0 1       | 0 1       ^ 0 1 
     -----       -----       -----       -----
     1   0       0 0 0       0 0 1       0 0 1
@@ -46,7 +47,7 @@
     x >> 4(arithmetic)          [00000110]          [11111001] <<<---signed 
 *shift_operation.c*
 >- gcc -o out/shift_operation shift_operation.c
-##### Integer Presentation
+### Integer Presentation
         C data type       minimum         maximum        Bytes
        [signed] char       -2^7            2^7-1           1
        unsigned char         0             2^8-1           1        
@@ -65,12 +66,14 @@
     | Xw-1 | Xw-2 | ... | X0 |
     --------------------------
 ---------------------------------------
-> Unsigned EnCodings
+##### Unsigned EnCodings
 
 *B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
 = $$\sum_{i=1}^{w-1}x~i~*2^i$$
 
-> Two's Complement Encoding
+##### Two's Complement Encoding
 
 *B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
 = $\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup> + $$\sum_{i=1}^{w-2}x~i~*2^i$$
+
+##### Conversions between Signed and Unsigned 
