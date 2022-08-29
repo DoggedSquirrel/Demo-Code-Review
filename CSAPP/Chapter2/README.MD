@@ -60,9 +60,17 @@
           uint32_t           0             2^64-1          4
            int64_t        -2^63            2^63-1          8
           uint64_t           0             2^64-1          8
-##### Unsigned EnCodings
+---------------------------------------
     --------------------------
     | Xw-1 | Xw-2 | ... | X0 |
     --------------------------
+---------------------------------------
+> Unsigned EnCodings
+
 *B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
-$$=\sum_{i=1}^wx~i~*2^i$$
+= $$\sum_{i=1}^{w-1}x~i~*2^i$$
+
+> Two's Complement Encoding
+
+*B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
+= $\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup> + $$\sum_{i=1}^{w-2}x~i~*2^i$$
