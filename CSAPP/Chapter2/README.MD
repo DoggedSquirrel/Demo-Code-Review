@@ -48,19 +48,20 @@ Operation
 *shift_operation.c*
 >- gcc -o out/shift_operation shift_operation.c
 ### Integer Presentation
-        C data type       minimum         maximum        Bytes
-       [signed] char       -2^7            2^7-1           1
-       unsigned char         0             2^8-1           1        
-            short         -2^15            2^15-1          2
-       unsigned short        0             2^32-1          2
-            int           -2^31            2^31-1          4
-        unsigned int         0             2^32-1          4
-            long          -2^63            2^63-1          8
-        unsigned long        0             2^64-1          8
-           int32_t        -2^31            2^31-1          4
-          uint32_t           0             2^64-1          4
-           int64_t        -2^63            2^63-1          8
-          uint64_t           0             2^64-1          8
+      |   C data type   |     minimum     |     maximum     |     Bytes    |
+      | --------------- | --------------- | --------------- | ------------ |
+      |  [signed] char  |      -2^7       |      2^7-1      |       1      |
+      |  unsigned char  |        0        |      2^8-1      |       1      |   
+      |       short     |     -2^15       |      2^15-1     |       2      |
+      |  unsigned short |        0        |      2^32-1     |       2      |
+      |       int       |     -2^31       |      2^31-1     |       4      |
+      |  unsigned int   |        0        |      2^32-1     |       4      |
+      |      long       |     -2^63       |      2^63-1     |       8      |
+      |  unsigned long  |        0        |      2^64-1     |       8      |
+      |     int32_t     |     -2^31       |      2^31-1     |       4      |
+      |    uint32_t     |        0        |     2^64-1      |       4      |
+      |     int64_t     |     -2^63       |      2^63-1     |       8      |
+      |    uint64_t     |        0        |      2^64-1     |       8      |
 ---------------------------------------
     --------------------------
     | Xw-1 | Xw-2 | ... | X0 |
