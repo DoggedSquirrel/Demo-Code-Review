@@ -78,4 +78,24 @@ Operation
 *B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
 = $\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup> + $$\sum_{i=1}^{w-2}x~i~*2^i$$
 
+$$ T2Uw(x)=\left\{
+\begin{matrix}
+ x+2^w ,x<0\\
+x,x>=0
+\end{matrix}
+\right.
+$$
+
+$$ U2Tw(x)=\left\{
+\begin{matrix}
+ x ,   x<=TMax_w\\
+x-2^w,  x>TMax_w
+\end{matrix}
+\right.
+$$
+
+
+
+
+
 ##### Conversions between Signed and Unsigned 
