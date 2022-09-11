@@ -78,6 +78,8 @@ Operation
 *B2U*<sub>$\mathcal{w}$</sub>($\vec{x}$)≐$\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup>+$\mathcal{x}$<sub>$\mathcal{w-2}$</sub>·$\mathcal{2}$<sup>$\mathcal{w-2}$</sup>+...+$\mathcal{x}$<sub>$\mathcal{0}$</sub>·$\mathcal{2}$<sup>$\mathcal{0}$</sup>
 = $\mathcal{x}$<sub>$\mathcal{w-1}$</sub>·$-\mathcal{2}$<sup>$\mathcal{w-1}$</sup> + $$\sum_{i=1}^{w-2}x~i~*2^i$$
 
+##### Conversions between Signed and Unsigned 
+
 $$ T2Uw(x)=\left\{
 \begin{matrix}
  x+2^w ,x<0\\
@@ -94,8 +96,30 @@ x-2^w,  x>TMax_w
 \right.
 $$
 
+##### Expanding the Bit Representation of a Number
+> Zero Extension
 
+| unsign char |     unsign short    |
+| ----------- | ------------------- |
+|  1111 1110  | 0000 0000 1111 1110 |
 
+> Unsign Extension
 
+| unsign char |     unsign short    |
+| ----------- | ------------------- |
+|  1111 1110  | 1111 1111 1111 1110 |
 
-##### Conversions between Signed and Unsigned 
+*B2T<sub>w</sub>(X)* = *B2T<sub>w+1</sub>(X)*
+
+0x1110 = -8+4+2=-2
+
+0x11110 = -16+8+4+2=-2
+
+> Truncating Number
+
+32 bit -> low 16 bit<br>
+*B2T<sub>k</sub>*(X) =  *B2T<sub>2k</sub>*(X) mod 2<sup>*k*</sup>
+
+*truncating_number.c*
+>- gcc -o out/truncating_number truncating_number.c
+
