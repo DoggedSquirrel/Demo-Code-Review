@@ -25,11 +25,11 @@
 >- gcc -o out/byte_print byte_print.c
 ### Boolean Algebra     
 ##### Bit_Level Operations----->Mask 
-Operation
-    ~           & 0 1       | 0 1       ^ 0 1 
-    -----       -----       -----       -----
-    1   0       0 0 0       0 0 1       0 0 1
-    0   1       1 0 1       1 1 1       1 1 0
+    Operation<br>
+        ~           & 0 1       | 0 1       ^ 0 1
+        -----       -----       -----       -----
+        1   0       0 0 0       0 0 1       0 0 1
+        0   1       1 0 1       1 1 1       1 1 0
 *bit_level_operation.c*
 >- gcc -o out/bit_level_operation bit_level_operation.c
 ##### Logic Operation
@@ -80,20 +80,19 @@ Operation
 
 ##### Conversions between Signed and Unsigned 
 
-$$ T2Uw(x)=\left\{
-\begin{matrix}
+$$ T2Uw(x)=
+\begin{cases}
  x+2^w ,x<0\\
 x,x>=0
-\end{matrix}
-\right.
+\end{cases}
+
 $$
 
-$$ U2Tw(x)=\left\{
-\begin{matrix}
- x ,   x<=TMax_w\\
-x-2^w,  x>TMax_w
-\end{matrix}
-\right.
+$$ U2Tw(x)=
+\begin{cases}
+ x ,   & x<=TMax_w\\
+x-2^w, & x>TMax_w
+\end{cases}
 $$
 ----------------------------------
 ##### Expanding the Bit Representation of a Number
